@@ -1,0 +1,447 @@
+/* ===========================
+   AMAN CHHETRI PORTFOLIO V2
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+.bg-animation{
+
+position:fixed;
+
+width:100%;
+height:100%;
+z-index:-1;
+
+background:
+radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(0,255,120,.15),transparent 30%),
+radial-gradient(circle at 50% 80%,rgba(0,132,255,.15),transparent 35%);
+
+animation:bgMove 10s infinite alternate;
+
+}
+
+@keyframes bgMove{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Navbar */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+backdrop-filter:blur(15px);
+
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:999;
+
+}
+
+nav{
+
+width:90%;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#00d9ff;
+
+letter-spacing:2px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00ff99;
+
+}
+
+#theme{
+
+border:none;
+
+background:#00d9ff;
+
+padding:10px 15px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+#theme:hover{
+
+transform:rotate(180deg);
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+.hero h3{
+
+font-size:28px;
+
+font-weight:400;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-size:80px;
+
+color:#00d9ff;
+
+margin-bottom:15px;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+.hero h2{
+
+font-size:35px;
+
+height:45px;
+
+color:#00ff99;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.btn,.btn2{
+
+padding:16px 38px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.btn{
+
+background:linear-gradient(45deg,#00d9ff,#00ff99);
+
+color:black;
+
+}
+
+.btn:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+.btn2{
+
+border:2px solid #00ff99;
+
+color:white;
+
+}
+
+.btn2:hover{
+
+background:#00ff99;
+
+color:black;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:22px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+}/* Sections */
+
+.glass{
+
+width:85%;
+
+margin:80px auto;
+
+padding:50px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+.glass h1{
+
+color:#00d9ff;
+
+margin-bottom:25px;
+
+font-size:40px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.06);
+
+padding:25px;
+
+border-radius:18px;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 20px cyan;
+
+}
+
+.skill p{
+
+margin-top:18px;
+
+}
+
+.bar{
+
+width:100%;
+
+height:12px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-bottom:15px;
+
+}
+
+.bar span{
+
+display:block;
+
+height:100%;
+
+background:linear-gradient(90deg,cyan,#00ff99);
+
+border-radius:20px;
+
+}
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:#020814;
+
+margin-top:80px;
+
+}
